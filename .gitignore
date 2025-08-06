@@ -1,0 +1,8 @@
+# Ignora a pasta de dependências
+/node_modules/
+
+# Ignora arquivos de backup e de build
+*.zip
+
+# Ignora a pasta de build do Next.js
+/.next/
