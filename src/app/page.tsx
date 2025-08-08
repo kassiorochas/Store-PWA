@@ -4,17 +4,17 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative max-w-7xl mx-auto px-4 md:px-8 py-32 md:py-40 text-center md:text-left bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-600 rounded-2xl shadow-lg">
+      <section className="relative max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-40 text-center md:text-left bg-gradient-to-tr from-purple-400 via-purple-500 to-purple-600 rounded-2xl shadow-lg">
         {/* Elemento decorativo de fundo */}
         <div className="absolute -right-40 top-0 h-[32rem] w-[32rem] bg-gradient-to-tr from-purple-500 via-pink-400 to-purple-300 opacity-30 rounded-full blur-3xl pointer-events-none -z-10"></div>
 
         {/* Conteúdo principal do herói */}
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
+        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6">
           Transforme sua Ideia em Realidade Digital
         </h1>
         <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-3xl">
-          Criação de Sites, PWAs e E-commerces que Impulsionam seu Negócio.
-          Com expertise de um Gerente de Projetos, entregamos soluções digitais
+          Criação de Sites, PWAs e E-commerces que Impulsionam seu Negócio. Com
+          expertise de um Gerente de Projetos, entregamos soluções digitais
           modernas e eficazes.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -47,7 +47,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Design moderno</h3>
               <p className="text-gray-600">
-                Paletas de cores acolhedoras, tipografia expressiva e micro‑interações para criar experiências envolventes.
+                Paletas de cores acolhedoras, tipografia expressiva e
+                micro‑interações para criar experiências envolventes.
               </p>
             </div>
 
@@ -58,7 +59,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Performance e SEO</h3>
               <p className="text-gray-600">
-                Sites rápidos e otimizados para buscadores, garantindo visibilidade e melhor posição nos resultados de pesquisa.
+                Sites rápidos e otimizados para buscadores, garantindo
+                visibilidade e melhor posição nos resultados de pesquisa.
               </p>
             </div>
 
@@ -69,7 +71,8 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Tecnologia PWA</h3>
               <p className="text-gray-600">
-                Experiências progressivas que funcionam offline, podem ser instaladas no dispositivo e oferecem experiência de app.
+                Experiências progressivas que funcionam offline, podem ser
+                instaladas no dispositivo e oferecem experiência de app.
               </p>
             </div>
           </div>

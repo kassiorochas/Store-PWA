@@ -4,7 +4,9 @@ export default function Servicos() {
   return (
     <section className="bg-gray-50 pb-1">
       <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-        <h1 className="text-4xl font-bold text-center text-purple-700 mb-10">Serviços</h1>
+        <h1 className="text-4xl font-bold text-center text-purple-700 mb-10">
+          Serviços
+        </h1>
 
         <div className="grid gap-10 md:grid-cols-3">
           {/* Sites Institucionais */}
@@ -14,9 +16,9 @@ export default function Servicos() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Sites Institucionais</h3>
             <p className="text-gray-600">
-              Crie uma presença online sólida e profissional com um site sob medida.
-              Design responsivo e otimizado para transmitir confiança e comunicar
-              sua mensagem de forma eficaz.
+              Crie uma presença online sólida e profissional com um site sob
+              medida. Design responsivo e otimizado para transmitir confiança e
+              comunicar sua mensagem de forma eficaz.
             </p>
             <Link
               href="/contato"
@@ -49,7 +51,9 @@ export default function Servicos() {
             <div className="mb-4 h-14 w-14 rounded-full bg-orange-600 flex items-center justify-center text-white text-2xl font-bold">
               EC
             </div>
-            <h3 className="text-xl font-semibold mb-3">E-commerce / Loja Virtual</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              E-commerce / Loja Virtual
+            </h3>
             <p className="text-gray-600">
               Venda produtos ou serviços online com segurança e facilidade.
               Soluções completas para gerenciar sua loja virtual.
@@ -67,7 +71,9 @@ export default function Servicos() {
             <div className="mb-4 h-14 w-14 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold">
               CE
             </div>
-            <h3 className="text-xl font-semibold mb-3">Consultoria Estratégica</h3>
+            <h3 className="text-xl font-semibold mb-3">
+              Consultoria Estratégica
+            </h3>
             <p className="text-gray-600">
               Orientação estratégica para impulsionar seus projetos digitais.
               Planejamento e execução focados em resultados.
@@ -87,8 +93,9 @@ export default function Servicos() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Google Ads</h3>
             <p className="text-gray-600">
-              Aumente a visibilidade e o tráfego do seu negócio com anúncios pagos.
-              Estratégias otimizadas para atrair clientes qualificados e gerar ROI.
+              Aumente a visibilidade e o tráfego do seu negócio com anúncios
+              pagos. Estratégias otimizadas para atrair clientes qualificados e
+              gerar ROI.
             </p>
             <Link
               href="/contato"
