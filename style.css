@@ -18,7 +18,7 @@ body {
 /* Estilo do Menu de Navegação */
 .navbar {
     display: flex;
-    justify-content: flex-end; /* CORREÇÃO AQUI: Alinha os links à direita */
+    justify-content: flex-end;
     align-items: center;
     padding: 1rem 2rem;
     background-color: rgba(18, 18, 30, 0.7);
@@ -73,7 +73,7 @@ body {
     text-align: center;
     height: 100vh;
     padding: 0 2rem;
-    background: linear-gradient(135deg, rgba(38, 30, 75, 0.9), rgba(118, 75, 162, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto-format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(38, 30, 75, 0.9), rgba(118, 75, 162, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
 }
 
 .hero-content h1 {
@@ -378,6 +378,221 @@ body {
     font-size: 1.2rem;
 }
 
+/* Secção de Ferramentas */
+#ferramentas {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #12121e;
+}
+
+#ferramentas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#ferramentas .subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ferramenta-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #1a1a2e;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #3a3a5a;
+}
+
+.ferramenta-container .controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.ferramenta-container label {
+    font-weight: bold;
+}
+
+.ferramenta-container select {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #3a3a5a;
+    background-color: #12121e;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.ideia-resultado {
+    background-color: rgba(0,0,0,0.2);
+    padding: 2rem;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #3a3a5a;
+    transition: all 0.3s ease;
+}
+
+.ideia-resultado i {
+    font-size: 2rem;
+    color: #a78bfa;
+    margin-bottom: 1rem;
+}
+
+.ideia-resultado p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Secção de Auditoria */
+#auditoria {
+    padding: 6rem 2rem;
+    text-align: center;
+    background-color: #1a1a2e;
+}
+
+#auditoria h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#auditoria .subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.auditoria-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.pergunta-bloco {
+    background-color: #12121e;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #3a3a5a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pergunta-bloco p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.pergunta-bloco .opcoes {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.pergunta-bloco input[type="radio"] {
+    display: none;
+}
+
+.pergunta-bloco label {
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #3a3a5a;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pergunta-bloco input[type="radio"]:checked + label {
+    background-color: #a78bfa;
+    color: #12121e;
+    border-color: #a78bfa;
+    font-weight: bold;
+}
+
+#calcular-score-btn {
+    display: block;
+    margin: 2rem auto 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auditoria-resultado {
+    margin-top: 3rem;
+    background-color: #12121e;
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #a78bfa;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.auditoria-resultado h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.auditoria-resultado #score-valor {
+    color: #a78bfa;
+}
+
+.auditoria-resultado #score-texto {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.auditoria-resultado h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.auditoria-resultado ul {
+    list-style: none;
+    padding: 0;
+}
+
+.auditoria-resultado li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.auditoria-resultado .final-cta {
+    text-align: center;
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+}
+.auditoria-resultado .final-cta a {
+    color: #a78bfa;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* Secção de Contato */
 #contato {
     padding: 6rem 2rem;
@@ -458,11 +673,11 @@ footer {
     background-color: #1a1a2e;
     border: 1px solid #3a3a5a;
     color: white;
-    padding: 1rem 1.5rem;
+    padding: 1.5rem;
     border-radius: 12px;
     z-index: 1020; 
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
     box-shadow: 0 5px 25px rgba(0,0,0,0.4);
     
@@ -476,7 +691,32 @@ footer {
 
 .banner-content p {
     margin: 0;
+    margin-bottom: 1rem;
     color: rgba(255,255,255,0.9);
+    font-weight: bold;
+}
+
+.banner-options {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.banner-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #a78bfa;
+    color: #a78bfa;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #a78bfa;
+    color: #12121e;
 }
 
 .close-banner-btn {
@@ -487,6 +727,8 @@ footer {
     cursor: pointer;
     opacity: 0.7;
     transition: opacity 0.3s ease;
+    padding: 0;
+    line-height: 1;
 }
 
 .close-banner-btn:hover {
@@ -509,8 +751,11 @@ footer {
     .nav-links {
         display: none;
     }
+    .navbar {
+        padding-left: 2rem;
+    }
 
-    .hero-content h1, #servicos h2, #cases h2, .sobre-texto h2, #contato h2 {
+    .hero-content h1, #servicos h2, #cases h2, .sobre-texto h2, #contato h2, #ferramentas h2, #auditoria h2 {
         font-size: 2rem;
     }
     
@@ -524,7 +769,7 @@ footer {
         font-size: 1.5rem;
     }
 
-    #servicos, #cases, #sobre, #contato {
+    #servicos, #cases, #sobre, #contato, #ferramentas, #auditoria {
         padding: 4rem 1.5rem;
     }
     

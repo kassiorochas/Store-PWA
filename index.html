@@ -19,7 +19,12 @@
 
     <div id="welcome-banner" class="welcome-banner">
         <div class="banner-content">
-            <p>Bem-vindo à **Store PWA**, a sua nova parceira de crescimento digital!</p>
+            <p>Bem-vindo! Qual o seu principal objetivo digital hoje?</p>
+            <div class="banner-options">
+                <button class="banner-btn" data-goal="atrair">Atrair Clientes</button>
+                <button class="banner-btn" data-goal="vender">Vender Online</button>
+                <button class="banner-btn" data-goal="organizar">Organizar minhas redes</button>
+            </div>
         </div>
         <button id="close-banner" class="close-banner-btn">&times;</button>
     </div>
@@ -33,6 +38,7 @@
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#cases">Cases de Sucesso</a></li>
                 <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
@@ -41,7 +47,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>O Parceiro Digital Que o Seu Negócio Precisa Para Crescer</h1>
+                <h1 id="main-headline">O Parceiro Digital Que o Seu Negócio Precisa Para Crescer</h1>
                 <p>Sites de alta performance, PWAs e gestão de redes sociais que transformam cliques em clientes.</p>
                 <a href="https://calendly.com/kassiorochas/sessao-estrategica-de-15-minutos" target="_blank" class="cta-button">Agende a Sua Sessão Estratégica Gratuita</a>
             </div>
@@ -114,8 +120,8 @@
                     <img src="img/logo-storepwa.png" alt="Logo da Store PWA"> 
                 </div>
                 <div class="sobre-texto">
-                    <h2>Nós somos a sua equipe digital dedicada</h2>
-                    <h3>Fundada por Kassio Rocha e Gabriele Inalda</h3>
+                    <h2>Nós somos a sua equipa digital dedicada</h2>
+                    <h3>Fundada por Kassio Rocha e Gabriela Inalda</h3>
                     <p>A Store PWA nasceu de uma paixão: usar a tecnologia não apenas para criar sites, mas para construir pontes entre pequenos e médios negócios e o seu verdadeiro potencial digital. Vimos muitos empreendedores com ideias brilhantes a perderem-se na complexidade do marketing digital, e decidimos mudar isso.</p>
                     <p>A nossa filosofia é simples: ser o parceiro que nós mesmos gostaríamos de ter. Diferente de grandes agências, aqui você tem uma linha direta connosco, os fundadores. Envolvemo-nos pessoalmente em cada detalhe do seu projeto, garantindo agilidade, transparência e uma solução que não é apenas bonita, mas que gera resultados reais para o seu negócio.</p>
                     <div class="inovacao-selo">
@@ -125,7 +131,75 @@
                 </div>
             </div>
         </section>
+
+        <section id="ferramentas">
+            <h2>Central de Ferramentas Digitais</h2>
+            <p class="subtitle">A precisar de inspiração? Use o nosso gerador de ideias de conteúdo gratuito!</p>
+            <div class="ferramenta-container">
+                <div class="controles">
+                    <label for="nicho-select">Selecione o seu nicho:</label>
+                    <select id="nicho-select">
+                        <option value="restaurante">Restaurante / Café</option>
+                        <option value="loja">Loja / E-commerce</option>
+                        <option value="servicos">Serviços (Consultor, etc)</option>
+                    </select>
+                    <button id="gerar-ideia-btn" class="cta-button">Gerar Nova Ideia</button>
+                </div>
+                <div id="ideia-resultado" class="ideia-resultado">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <p>A sua próxima grande ideia de conteúdo aparecerá aqui!</p>
+                </div>
+            </div>
+        </section>
         
+        <section id="auditoria">
+            <h2>Auditoria Digital Gratuita</h2>
+            <p class="subtitle">Descubra em 60 segundos os pontos fortes e as oportunidades de melhoria da sua presença online.</p>
+            
+            <div class="auditoria-container">
+                <div class="auditoria-perguntas">
+                    <div class="pergunta-bloco">
+                        <p>1. O seu negócio tem um perfil verificado e otimizado no Google Meu Negócio?</p>
+                        <div class="opcoes">
+                            <input type="radio" id="q1-sim" name="q1" value="1"><label for="q1-sim">Sim</label>
+                            <input type="radio" id="q1-nao" name="q1" value="0"><label for="q1-nao">Não</label>
+                        </div>
+                    </div>
+                    <div class="pergunta-bloco">
+                        <p>2. O seu site ou PWA é totalmente adaptado para telemóveis e carrega em menos de 3 segundos?</p>
+                        <div class="opcoes">
+                            <input type="radio" id="q2-sim" name="q2" value="1"><label for="q2-sim">Sim</label>
+                            <input type="radio" id="q2-nao" name="q2" value="0"><label for="q2-nao">Não</label>
+                        </div>
+                    </div>
+                    <div class="pergunta-bloco">
+                        <p>3. Você publica conteúdo nas redes sociais de forma consistente (pelo menos 3 vezes por semana)?</p>
+                        <div class="opcoes">
+                            <input type="radio" id="q3-sim" name="q3" value="1"><label for="q3-sim">Sim</label>
+                            <input type="radio" id="q3-nao" name="q3" value="0"><label for="q3-nao">Não</label>
+                        </div>
+                    </div>
+                    <div class="pergunta-bloco">
+                        <p>4. Você já investiu em anúncios pagos (tráfego pago) no Instagram ou Google?</p>
+                        <div class="opcoes">
+                            <input type="radio" id="q4-sim" name="q4" value="1"><label for="q4-sim">Sim</label>
+                            <input type="radio" id="q4-nao" name="q4" value="0"><label for="q4-nao">Não</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="calcular-score-btn" class="cta-button">Ver o Meu Diagnóstico</button>
+
+                <div id="auditoria-resultado" class="auditoria-resultado" style="display: none;">
+                    <h3>O seu Score Digital é: <span id="score-valor"></span></h3>
+                    <p id="score-texto"></p>
+                    <h4>Recomendações para si:</h4>
+                    <ul id="score-recomendacoes"></ul>
+                    <p class="final-cta">Gostaria de um plano de ação para melhorar o seu score? <strong><a href="#contato">Vamos conversar!</a></strong></p>
+                </div>
+            </div>
+        </section>
+
         <section id="contato">
             <h2>Vamos transformar a sua ideia em realidade?</h2>
             <p>Clique abaixo para agendar a sua sessão estratégica gratuita de 15 minutos. Sem compromisso.</p>
