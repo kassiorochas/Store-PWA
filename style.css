@@ -18,16 +18,15 @@ body {
 /* Estilo do Menu de Navegação */
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha os links à direita por padrão */
     align-items: center;
     padding: 1rem 2rem;
     background-color: rgba(18, 18, 30, 0.7);
     backdrop-filter: blur(10px);
     width: 100%;
-    position: fixed;
+    position: fixed; /* Fixa o menu no topo */
     top: 0;
     z-index: 1000;
-    position: relative; 
 }
 
 /* Estilos para a logo no cabeçalho */
@@ -71,9 +70,10 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 100vh;
-    padding: 0 2rem;
+    min-height: 100vh; /* Ajustado para min-height para garantir que o conteúdo não seja cortado */
+    padding: 8rem 2rem 4rem; /* Ajuste para compensar o navbar fixo */
     background: linear-gradient(135deg, rgba(38, 30, 75, 0.9), rgba(118, 75, 162, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
+    background-attachment: fixed; /* Efeito parallax */
 }
 
 .hero-content h1 {
@@ -236,7 +236,7 @@ body {
 }
 
 .case-visual {
-    flex: 0 1 320px; 
+    flex: 0 1 320px; /* Mantém a largura fixa para o visual */
 }
 
 .case-content {
@@ -252,6 +252,7 @@ body {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #222; /* Fundo para quando as imagens não carregam */
 }
 
 .slider-image {
@@ -261,12 +262,14 @@ body {
     width: 100%;
     height: 100%;
     object-position: top center;
+    background-size: cover; /* Garante que a imagem cubra a área */
 }
 
 .slider-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block; /* Remove espaço extra abaixo da imagem */
 }
 
 .before-image {
@@ -736,27 +739,54 @@ footer {
 }
 
 
-/* Responsividade Geral e Ajustes Finais */
+/* --- RESPONSIVIDADE --- */
+
+/* Ajustes para ecrãs menores que 992px (tablets e alguns desktops menores) */
 @media (max-width: 992px) {
     .case-study, .sobre-container {
         flex-direction: column;
+        text-align: center; /* Centraliza o texto quando em coluna */
+    }
+    .sobre-imagem {
+        margin-bottom: 2rem; /* Espaçamento entre imagem e texto no mobile */
     }
     .sobre-imagem img {
         width: 250px; 
         height: auto;
     }
+    .case-content, .sobre-texto {
+        flex: none; /* Remove a flexibilidade para o conteúdo preencher a largura */
+        max-width: 100%; /* Garante que ocupe a largura total */
+    }
+    .case-content h4, .case-content p {
+        text-align: center; /* Centraliza os textos dentro do case content */
+    }
+    .case-content .resultados ul {
+        justify-content: center; /* Centraliza os ícones e texto da lista */
+        display: inline-block; /* Para centralizar o bloco da lista */
+        text-align: left; /* Alinha o texto da lista à esquerda dentro do bloco */
+    }
 }
 
+/* Ajustes para ecrãs menores que 768px (smartphones e tablets pequenos) */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
     .navbar {
-        padding-left: 2rem;
+        justify-content: center; /* Centraliza a logo quando o menu está escondido */
+        padding: 0.8rem 1rem; /* Diminui o padding do navbar */
+    }
+    .logo-link {
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza a logo horizontalmente */
+    }
+    .logo-img {
+        height: 70px; /* Diminui a altura da logo para mobile */
+    }
+    .nav-links {
+        display: none; /* Esconde o menu de navegação completo no mobile */
     }
 
     .hero-content h1, #servicos h2, #cases h2, .sobre-texto h2, #contato h2, #ferramentas h2, #auditoria h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Reduz o tamanho da fonte dos títulos */
     }
     
     .hero-content p {
@@ -770,7 +800,7 @@ footer {
     }
 
     #servicos, #cases, #sobre, #contato, #ferramentas, #auditoria {
-        padding: 4rem 1.5rem;
+        padding: 4rem 1.5rem; /* Reduz o padding das secções */
     }
     
     .footer-container {
@@ -791,6 +821,76 @@ footer {
         left: 10px;
         right: 10px;
         bottom: 10px;
-        justify-content: space-between;
+        flex-direction: column; /* Coloca o conteúdo do banner em coluna */
+        align-items: center; /* Centraliza os itens do banner */
+        text-align: center;
+    }
+
+    .welcome-banner .close-banner-btn {
+        position: absolute; /* Posiciona o botão de fechar no canto superior direito */
+        top: 10px;
+        right: 10px;
+    }
+
+    .banner-content p {
+        margin-bottom: 0.75rem;
+    }
+
+    .banner-options {
+        justify-content: center; /* Centraliza os botões de opção */
+    }
+
+    /* Correção para o slider antes e depois no mobile */
+    .slider-container {
+        max-width: 90%; /* Ajusta a largura máxima para se adequar a ecrãs menores */
+        height: 400px; /* Define uma altura fixa para o slider em mobile se necessário */
+        aspect-ratio: auto; /* Deixa o aspect-ratio automático para não forçar em telas pequenas */
+    }
+
+    .slider-image img {
+        object-fit: contain; /* Ajusta a imagem para caber sem cortar, se necessário */
+        /* Pode ser 'cover' ou 'contain' dependendo de como queremos que a imagem se comporte */
+        /* 'cover' para preencher, 'contain' para mostrar a imagem inteira */
+    }
+
+    .pergunta-bloco {
+        flex-direction: column; /* Coloca pergunta e opções em coluna */
+        align-items: flex-start; /* Alinha a pergunta à esquerda */
+    }
+
+    .pergunta-bloco .opcoes {
+        width: 100%; /* Ocupa a largura total para os botões Sim/Não */
+        justify-content: space-around; /* Espaça os botões Sim/Não */
+    }
+}
+
+/* Para ecrãs menores que 480px (smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    .servico-card, .ferramenta-container {
+        padding: 1.5rem;
+    }
+    .ferramenta-container .controles {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .ferramenta-container select, #gerar-ideia-btn {
+        width: 100%;
+        max-width: 300px; /* Limita a largura para botões/selects */
+    }
+    .ideia-resultado p {
+        font-size: 1rem;
+    }
+    .auditoria-resultado h3 {
+        font-size: 1.5rem;
+    }
+    .auditoria-resultado #score-texto {
+        font-size: 1rem;
+    }
+    .pergunta-bloco label {
+        padding: 0.5rem 1rem; /* Diminui o padding dos botões Sim/Não */
+        font-size: 0.9rem;
     }
 }

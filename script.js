@@ -183,20 +183,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 nivel = 'Avançado';
                 texto = 'Parabéns, a sua presença digital já é forte! O foco agora é em otimizar processos e escalar os seus resultados.';
                 recomendacoes = [
-                    '<strong>Escala:</strong> Aumente o investimento em campanhas de anúncios que já demonstraram bons resultados.',
-                    '<strong>Engajamento:</strong> Crie campanhas interativas e conteúdo que gere conversas com o seu público.',
-                    '<strong>Análise Preditiva:</strong> Use os dados que já tem para prever tendências e tomar decisões estratégicas.'
-                ];
-            }
-
-            scoreValorSpan.textContent = nivel;
-            scoreTextoP.textContent = texto;
-            scoreRecomendacoesUl.innerHTML = recomendacoes.map(rec => `<li><i class="fa-solid fa-circle-check"></i>${rec}</li>`).join('');
-
-            resultadoDiv.style.display = 'block';
-        });
-    }
-
-    // Executa a personalização do título assim que a página carregar
-    personalizarTitulo();
-});
+                    '<strong>Escala:</strong> Aumente o investimento em campanhas
