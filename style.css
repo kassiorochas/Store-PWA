@@ -18,10 +18,10 @@ body {
 /* --- ESTILOS DO HEADER --- */
 .navbar {
     display: flex;
-    justify-content: space-between; /* Espaça a logo e os links */
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem;
-    height: 80px; /* Altura controlada para a navbar */
+    height: 80px;
     background-color: rgba(18, 18, 30, 0.85);
     backdrop-filter: blur(10px);
     width: 100%;
@@ -31,11 +31,11 @@ body {
 }
 
 .logo-link {
-    flex-shrink: 0; /* Impede que a logo encolha */
+    flex-shrink: 0;
 }
 
 .logo-img {
-    height: 65px; /* Tamanho da logo */
+    height: 70px;
     width: auto;
     display: block; 
 }
@@ -65,7 +65,7 @@ main > section {
     padding: 6rem 2rem;
 }
 
-main > section h2 {
+.section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -88,7 +88,7 @@ main > section .subtitle {
     justify-content: center;
     text-align: center;
     min-height: 100vh;
-    padding-top: 80px; /* Espaço para a navbar fixa */
+    padding-top: 80px;
     background: linear-gradient(135deg, rgba(38, 30, 75, 0.9), rgba(118, 75, 162, 0.9)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070') no-repeat center center/cover;
     background-attachment: fixed;
 }
@@ -219,6 +219,7 @@ main > section .subtitle {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #222;
 }
 
 .slider-image {
@@ -288,7 +289,7 @@ main > section .subtitle {
 .inovacao-selo i { color: #a78bfa; font-size: 1.2rem; }
 
 /* --- SECÇÕES FERRAMENTAS E AUDITORIA --- */
-#ferramentas, #auditoria { background-color: #12121e; }
+#ferramentas { background-color: #12121e; }
 #auditoria { background-color: #1a1a2e; }
 
 .ferramenta-container, .auditoria-container { max-width: 800px; margin: 0 auto; }
@@ -323,8 +324,15 @@ main > section .subtitle {
 .auditoria-resultado .final-cta { text-align: center; margin-top: 2.5rem; font-size: 1.1rem; }
 .auditoria-resultado .final-cta a { color: #a78bfa; font-weight: bold; text-decoration: underline; }
 
-/* --- SECÇÃO CONTATO --- */
-#contato { background-color: #12121e; }
+/* --- SECÇÃO CONTATO (COM CORREÇÃO DE ALINHAMENTO) --- */
+#contato { 
+    background-color: #12121e;
+}
+.contato-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
 #contato p { margin-bottom: 2rem; }
 #contato span { display: block; margin: 1.5rem 0; color: rgba(255, 255, 255, 0.6); }
 
@@ -348,11 +356,12 @@ footer { background-color: #1a1a2e; padding: 2rem; border-top: 1px solid #3a3a5a
 .close-banner-btn { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.3s ease; padding: 0; line-height: 1; }
 .close-banner-btn:hover { opacity: 1; }
 
+
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 992px) {
-    .nav-links { display: none; }
     .navbar { justify-content: center; }
-    .logo-link { position: static; transform: none; padding-right: 0; }
+    .logo-link { position: static; transform: none; }
+    .nav-links { display: none; }
     
     .case-study, .sobre-container { flex-direction: column; text-align: center; }
     .sobre-imagem { margin-bottom: 2rem; }
@@ -362,7 +371,7 @@ footer { background-color: #1a1a2e; padding: 2rem; border-top: 1px solid #3a3a5a
 }
 
 @media (max-width: 768px) {
-    main > section h2, .hero-content h1 { font-size: 2rem; }
+    .section-title, .hero-content h1 { font-size: 2rem; }
     .logo-img { height: 60px; }
     
     main > section { padding: 4rem 1.5rem; }
